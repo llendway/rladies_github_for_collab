@@ -32,13 +32,20 @@ Git/Github can help us with this! How many of you already use Github?
 ## What we should already have set up
 
 
-
 * Created an account on https://github.com/.
-* 
+* Install and configure git - I have basic instructions here: https://github.com/llendway/github_for_collaboration/blob/master/github_for_collaboration.md#install--configure-git (I'll share this in the chat).  
+* Set up a PAT (personal access token) - see the previous link.  
+* In R Studio, install the following packages: usethis (for nice interactions with Git/Github) and gitcreds (if you haven't yet set up a PAT, there's some functions in here that help) ... I think that's it. I'm going to keep the R code REALLY simple.
 
 
+## Review of the Git/Github basics
 
-## Slide with Plot
+For images and more detail, see: https://github.com/llendway/github_for_collaboration/blob/master/github_for_collaboration.md
 
+1. Create repo on https://github.com/, checking the box to add a README and probably add a license (I usually choose MIT but do not trust me to explain any of the legality of this).  
+2. Clone the repo to your computer: click the green code button and copy the link, in R Studio File --> New Project --> Version Control --> Git --> Paste link and put it in the desired location.  
+3. Stage, Commit, and Push the .Rproj file.  
+4. Add a new .Rmd file and stage, commit, and push that.
 
+We will do these steps together!
 
