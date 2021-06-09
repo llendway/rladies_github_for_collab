@@ -146,6 +146,41 @@ I could keep making changes, committing, and pushing. If I'm finished, and since
 
 Click Merge pull request.
 
+## Branching - merging to main w/ conflict
+
+What if I (or my collaborator) made changes to the same file in the main branch, while I was making changes to it in the new branch? We'll have a merge conflict to resolve! Let's see those steps. First, we each make our changes and save, commit, and push.
+
+<div class="columns-2">
+![Change in new branch](images/1_change_in_new_branch.png){width="90%"}
+
+![Change in main branch](images/2_change_in_main_branch.png){width="90%"}
+
+</div>
+
+
+## Branching - merging to main w/ conflict
+
+In Github, click on the Compare & pull request button. This time, you'll see a screen like this - notice the red X message. Still click create pull request.
+
+![](images/3_no_auto_merge.png){width="70%"}
+
+## Branching - merging to main w/ conflict
+
+On this screen, you can click the Resolve conflict button.
+
+![](images/4_resolve_conflict.png){width="70%"}
+
+## Branching - merging to main w/ conflict
+
+An editor will open where you can make changes ... in this case, it's pretty easy to do it here, but I imagine this could get pretty complicated. I guess that's a good reason to do small steps in the branches so you don't run into those :)
+
+![](images/5_conflict_editor.png){width = "70%"}
+## Branching - merging to main w/ conflict
+
+Resolve the conflict and click Mark as resolved. Now you should be able to merge pull request as before and follow to the next steps as if you didn't have a merge conflict!
+
+![](images/6_conflict_resolved.png){width="70%"}
+
 ## Branching - merging to main
 
 Confirm that you really do want to merge the new branch with the main branch.
@@ -154,7 +189,16 @@ Confirm that you really do want to merge the new branch with the main branch.
 
 ## Branching - merging to main
 
-If you don't need the branch anymore, you can delete it. Note that it still shows up in R Studio so be careful you don't do work there (I can't figure out how to get rid of it).
+If you don't need the branch anymore, you can delete it. 
 
 ![](images/branch_delete.png){width="90%"}
+
+Then, go back to R Studio and pull in the changes, from the main branch.Note that it still shows up in R Studio so be careful you don't do work there (I can't figure out how to get rid of it).
+
+
+
+
+
+
+
 

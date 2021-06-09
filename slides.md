@@ -146,6 +146,21 @@ Click Merge pull request.
 
 ## Branching - merging to main
 
+What if I (or my collaborator) made changes to the same file in the main branch, while I was making changes to it in the new branch? We'll have a merge conflict to resolve! Let's see those steps. First, we each make our changes and save, commit, and push.
+
+<div class="columns-2">
+![Change in new branch](images/1_change_in_new_branch.png){width="90%"}
+
+![Change in main branch](images/2_change_in_main_branch.png){width="90%"}
+
+</div>
+
+
+
+
+
+## Branching - merging to main
+
 Confirm that you really do want to merge the new branch with the main branch.
 
 ![](images/branch_confirm_merge.png){width="90%"}
