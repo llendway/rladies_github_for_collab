@@ -44,7 +44,7 @@ I hope to give you a comfortable format to try things and learn. Please, ask que
 * Created an account on https://github.com/.
 * Install and configure git - I have basic instructions here: https://github.com/llendway/github_for_collaboration/blob/master/github_for_collaboration.md#install--configure-git (I'll share this in the chat).  
 * Set up a PAT (personal access token) - see the previous link.  
-* In R Studio, install the following packages: usethis (for nice interactions with Git/Github) and gitcreds (if you haven't yet set up a PAT, there's some functions in here that help) ... I think that's it. I'm going to keep the R code REALLY simple.
+* In R Studio, install the following packages: usethis (for nice interactions with Git/Github), gitcreds (if you haven't yet set up a PAT, there's some functions in here that help), gert, credentials, and gh. I'm going to keep the R code REALLY simple.
 
 
 ## Review of the Git/Github with R Project basics 
@@ -144,7 +144,7 @@ I could keep making changes, committing, and pushing. If I'm finished, and since
 
 Click Merge pull request.
 
-## Branching - merging to main
+## Branching - merging to main w/ conflict
 
 What if I (or my collaborator) made changes to the same file in the main branch, while I was making changes to it in the new branch? We'll have a merge conflict to resolve! Let's see those steps. First, we each make our changes and save, commit, and push.
 
@@ -156,8 +156,29 @@ What if I (or my collaborator) made changes to the same file in the main branch,
 </div>
 
 
+## Branching - merging to main w/ conflict
 
+In Github, click on the Compare & pull request button. This time, you'll see a screen like this - notice the red X message. Still click create pull request.
 
+![](images/3_no_auto_merge.png){width="70%"}
+
+## Branching - merging to main w/ conflict
+
+On this screen, you can click the Resolve conflict button.
+
+![](images/4_resolve_conflict.png){width="70%"}
+
+## Branching - merging to main w/ conflict
+
+An editor will open where you can make changes ... in this case, it's pretty easy to do it here, but I imagine this could get pretty complicated. I guess that's a good reason to do small steps in the branches so you don't run into those :)
+
+![](images/5_conflict_editor.png){width="70%"}
+
+## Branching - merging to main w/ conflict
+
+Resolve the conflict and click Mark as resolved. Now you should be able to merge pull request as before and follow to the next steps as if you didn't have a merge conflict!
+
+![](images/6_conflict_resolved.png){width="70%"}
 
 ## Branching - merging to main
 
@@ -167,7 +188,112 @@ Confirm that you really do want to merge the new branch with the main branch.
 
 ## Branching - merging to main
 
-If you don't need the branch anymore, you can delete it. Note that it still shows up in R Studio so be careful you don't do work there (I can't figure out how to get rid of it).
+If you don't need the branch anymore, you can delete it. 
 
 ![](images/branch_delete.png){width="90%"}
+
+Then, go back to R Studio and pull in the changes, from the main branch.Note that it still shows up in R Studio so be careful you don't do work there (I can't figure out how to get rid of it).
+
+## Pull requests (PRs)
+
+Once you're comfortable using these tools on your own and with some trusted collaborators, you may want to start making suggestions to other people's code - maybe add a feature in your favorite package or even just suggesting a typo fix in some documentation. That's a pull request! 
+
+We are going to use the instructions here: https://usethis.r-lib.org/articles/articles/pr-functions.html
+
+And we're going to make pull requests to a PR practice repo I created: https://github.com/llendway/pr_practice
+
+## Pull requests (PRs)
+
+We will need to load the usethis library. You should also have the gert, credentials, and gh packages installed. (If anyone gets an error like this: "Error in validate_gh_pat(new_gh_pat(x)) : A GitHub PAT must consist of 40 hexadecimal digits", update the gh package or reinstall, see [this post](https://community.rstudio.com/t/usethis-use-github-error-in-validate-gh-pat/105737)).
+
+
+```r
+library(usethis)
+```
+
+
+## Pull requests - fork and clone
+
+You are going to fork and clone the repo. Forking is putting it in your own Github repo and cloning it puts it on your computer. This function also sets the upstream remote to the original repo. This example uses my "other" GitHub account, which is pretty much a garbage account for me to practice with. 
+
+
+```r
+create_from_github("proflendway/test_pr")
+```
+
+You can change the default location, using `destdir` argument. If you are making a PR to your own repo, it won't fork it (since you already own it).
+
+## Pull requests - fork and clone
+
+After you run the code, you will see something like this, and I new RStudio window will open with this project open.
+
+![](images/7_pr_fork.png){width="50%"}
+
+## Pull requests - create branch
+
+Next, we create a branch so changes we make take place outside of the main branch. In the `pr_init()` function, name your branch. Do this in the project that was just opened - you may need to reload the usethis library first.
+
+
+```r
+pr_init(branch = "expand_readme")
+```
+
+![](images/8_pr_branch.png){width="70%"}
+
+## Pull requests - change, commit
+
+It may take a second for the new branch to show up in RStudio. Make sure you are in that new branch (it says you are but double check). Make a small change, save, and commit the file.
+
+![](images/8_pr_change_file.png){width="70%"}
+
+
+## Pull requests - submit it!
+
+Once you're finished making changes, use the `pr_push()` function (no arguments) to push out the changes to your copy of the repo on github. That will open a Github page and sets you up to make a PR!
+
+<div class="columns-2">
+
+![](images/9_pr_submit.png){width="95%"}
+
+\
+\
+\
+
+
+![](images/9_pr_makeit.png){width="95%"}
+
+</div>
+
+## Pull requests - message to maintainer
+
+After creating the pull request, you can (and should!) write a message about the changes you are proposing.
+
+![](images/9_pr_message.png){width="70%"}
+
+## Pull requests - maintainer side
+
+They could merge in Github, or [fancier things](https://usethis.r-lib.org/articles/articles/pr-functions.html#review-of-the-pull-request).
+
+![](images/9_pr_maintainer.png){width="60%"}
+
+## Pull request
+
+Let's do it!
+
+We're going to make pull requests to a PR practice repo I created: https://github.com/llendway/pr_practice
+
+## Resources
+
+These slides: https://github.com/llendway/rladies_github_for_collab
+
+My blog post, with video (thank you to my sister, Heather): https://lisalendway.netlify.app/posts/2021-02-24-gitinrstudio/
+
+Happy Git with R by Jenny Bryan: https://happygitwithr.com/ - an amazing resource, especially after you're a little more comfortable with using Git and Github
+
+The usethis Pull request helpers article: https://usethis.r-lib.org/articles/articles/pr-functions.html
+
+
+
+
+
 
