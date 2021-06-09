@@ -195,7 +195,50 @@ If you don't need the branch anymore, you can delete it.
 
 Then, go back to R Studio and pull in the changes, from the main branch.Note that it still shows up in R Studio so be careful you don't do work there (I can't figure out how to get rid of it).
 
+## Pull requests (PRs)
 
+Once you're comfortable using these tools on your own and with some trusted collaborators, you may want to start making suggestions to other people's code - maybe add a feature in your favorite package or even just suggesting a typo fix in some documentation. That's a pull request! 
+
+We are going to use the instructions here: https://usethis.r-lib.org/articles/articles/pr-functions.html
+
+And we're going to make pull requests to a PR practice repo I created: https://github.com/llendway/pr_practice
+
+## Pull requests (PRs)
+
+We will need to load the usethis library. You should also have the gert and credentials packages installed.
+
+```{r}
+library(usethis)
+```
+
+
+## Pull requests - fork and clone
+
+You are going to fork and clone the repo. Forking is putting it in your own Github repo and cloning it puts it on your computer. This function also sets the upstream remote to the original repo (mine, in this case) so you 
+
+```{r}
+
+```
+
+
+## Pull requests (PRs)
+
+
+## Pull requests (PRs)
+
+
+## Pull requests (PRs)
+
+
+## Resources
+
+These slides: https://github.com/llendway/rladies_github_for_collab
+
+My blog post, with video (thank you to my sister, Heather): https://lisalendway.netlify.app/posts/2021-02-24-gitinrstudio/
+
+Happy Git with R by Jenny Bryan: https://happygitwithr.com/ - an amazing resource, especially after you're a little more comfortable with using Git and Github
+
+The usethis Pull request helpers article: https://usethis.r-lib.org/articles/articles/pr-functions.html
 
 
 
