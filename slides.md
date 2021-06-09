@@ -17,7 +17,7 @@ I am NOT a Git/Github expert!
 
 <center>
 
-<div class="tenor-gif-embed" data-postid="21632152" data-share-method="host" data-width="50%" data-aspect-ratio="1.0"><a href="https://tenor.com/view/im-no-expert-saturday-night-live-im-not-apro-im-not-an-expert-iam-not-that-expert-with-it-gif-21632152">Im No Expert Saturday Night Live GIF</a> from <a href="https://tenor.com/search/imnoexpert-gifs">Imnoexpert GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+<div class="tenor-gif-embed" data-postid="21632152" data-share-method="host" data-width="40%" data-aspect-ratio="1.0"><a href="https://tenor.com/view/im-no-expert-saturday-night-live-im-not-apro-im-not-an-expert-iam-not-that-expert-with-it-gif-21632152">Im No Expert Saturday Night Live GIF</a> from <a href="https://tenor.com/search/imnoexpert-gifs">Imnoexpert GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
 </center>
 
@@ -30,9 +30,16 @@ I am NOT a Git/Github expert!
 
 Git/Github can help us with this! How many of you already use Github? 
 
+## Why learn this from me?
+
+* Git/Github were really intimidating to me at first - they still are!  
+* I didn't feel like I had a place where I could try things out and make mistakes.  
+* When things didn't work out the way they showed in online resources, I had no idea what to do!  
+
+I hope to give you a comfortable format to try things and learn. Please, ask questions and interrupt when I do something too quickly or that you don't fully follow. There are no stupid questions!
+
 
 ## What we should already have set up
-
 
 * Created an account on https://github.com/.
 * Install and configure git - I have basic instructions here: https://github.com/llendway/github_for_collaboration/blob/master/github_for_collaboration.md#install--configure-git (I'll share this in the chat).  
@@ -88,15 +95,64 @@ Let's create a merge conflict together!
 
 According to Github [documents](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches) (which I probably should read more of), "Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository." 
 
-You can experiment in a branch and then later merge it with your "main" branch (or with another branch).
+You can experiment in a branch and then later merge it with your "main" branch (or with another branch). 
+
+This can be a safer way to collaborate with others.
 
 
 ## Branching
 
+Let's add a branch (we'll do this together in a moment).
+
+Click on the "branch" in the Git tab.  
+
+
+![](images/branch.png){width="50%"}
 
 
 
+## Branching
+
+Give it a name and create. You'll see this after you do. 
+
+![](images/branch_created.png){width="50%"}
+
+You can also see the new branch on Github. Let's do these steps together.
+
+## Branching
+
+Now that we have a branch, let's use it. Make a change to a file in the new branch (we'll just use the README). Commit and push the changed file. On Github, you'll see a message like this:
+
+![](images/branch_compare_pr.png){width="90%"}
+
+If I'm collaborating, the collaborator can pull in changes to see the new branch. 
+
+Let's do this together. Make a few commits and pushes.
 
 
+## Branching - merging to main
 
+Once we are satisfied with the work we did in our branch, we'll want to merge it back to the main branch. Go out to Github and click on the Compare & pull request button in the new branch. This is creating a pull request - asking someone (in this case yourself) to pull in the changes you're about to merge. Fill in the fields and click Create pull request.
+
+![](images/branch_pr.png){width="50%"}
+
+## Branching - merging to main
+
+I could keep making changes, committing, and pushing. If I'm finished, and since I didn't make any difficult changes, it can be merged automatically - this won't always be the case.
+
+![](images/branch_merge.png){width="90%"}
+
+Click Merge pull request.
+
+## Branching - merging to main
+
+Confirm that you really do want to merge the new branch with the main branch.
+
+![](images/branch_confirm_merge.png){width="90%"}
+
+## Branching - merging to main
+
+If you don't need the branch anymore, you can delete it. Note that it still shows up in R Studio so be careful you don't do work there (I can't figure out how to get rid of it).
+
+![](images/branch_delete.png){width="90%"}
 
