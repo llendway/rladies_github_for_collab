@@ -4471,7 +4471,7 @@ slide:not(.current) .plotly.html-widget{
 
 <center>
 
-<div data-width="40%" data-postid="21632152" data-share-method="host" data-aspect-ratio="1.0" class="tenor-gif-embed">
+<div data-postid="21632152" data-width="40%" class="tenor-gif-embed" data-aspect-ratio="1.0" data-share-method="host">
 <a href="https://tenor.com/view/im-no-expert-saturday-night-live-im-not-apro-im-not-an-expert-iam-not-that-expert-with-it-gif-21632152">Im No Expert Saturday Night Live GIF</a> from <a href="https://tenor.com/search/imnoexpert-gifs">Imnoexpert GIFs</a></div>
 
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
@@ -4724,6 +4724,34 @@ slide:not(.current) .plotly.html-widget{
 
 <p>We’re going to make pull requests to a PR practice repo I created: <a href='https://github.com/llendway/pr_practice' title=''>https://github.com/llendway/pr_practice</a></p>
 
+</article></slide><slide class=""><hgroup><h2>Using the terminal … queue scary music</h2></hgroup><article  id="using-the-terminal-queue-scary-music">
+
+<p>I don’t like the terminal, but sometimes I’m forced to use it. When I have to do that, my palms get sweaty, and I sometimes close my eyes and peak through my fingers after hitting return while I wait in fear to see what sort of mistake I might have made. I’ve learned a few Git commands that I feel comfortable enough to share.</p>
+
+<p>There’s a video of me doing these same things here: <a href='https://lisalendway.netlify.app/posts/2021-02-24-gitinrstudio/#i-use-the-terminal-and-come-out-alive' title=''>https://lisalendway.netlify.app/posts/2021-02-24-gitinrstudio/#i-use-the-terminal-and-come-out-alive</a></p>
+
+</article></slide><slide class=""><hgroup><h2>Using the terminal</h2></hgroup><article  id="using-the-terminal">
+
+<p>This first one doesn’t actually require the terminal (yay!).</p>
+
+<p>You save a file, but don’t want those changes. You can right-click on the file in the Git tab and choose revert. You can also choose diff to see how it has changed from its last version. This will change the file back to the previous commit. So, if you’ve saved a lot and not committed, that could be a lot of changes.</p>
+
+</article></slide><slide class=""><hgroup><h2>Using the terminal</h2></hgroup><article  id="using-the-terminal-1">
+
+<p>You committed something you didn’t actually want to commit. Or maybe you committed something that’s too large to push to Github (that’s usually my mistake). So, I need to &ldquo;un-commit&rdquo;, which means heading to the terminal. In the terminal, run <code>git reset HEAD~1</code> which will bring back all the files you just committed as if they were never committed - you may need to refresh the Git pane.</p>
+
+<p>Then, you can make the changes you want, even deleting a file, and re-commit.</p>
+
+</article></slide><slide class=""><hgroup><h2>Using the terminal</h2></hgroup><article  id="using-the-terminal-2">
+
+<p>This time you committed and pushed. You may have made additional commits that you DO NOT CARE ABOUT. To revert to an old commit, use <code>git revert --no-commit &lt;SHA&gt;..HEAD</code> in the terminal, where <code>&lt;SHA&gt;</code> is the alpha numeric string that defines that commit. You can find the <code>&lt;SHA&gt;</code> in the history (the clock icon) in the Git tab.</p>
+
+</article></slide><slide class=""><hgroup><h2>Using the terminal</h2></hgroup><article  id="using-the-terminal-3">
+
+<p>This time you committed something, pushed it, and made more commits along the way.</p>
+
+<p>We can go back to a previous commit and keep our new commits by using <code>git revert &lt;SHA&gt;</code> in the terminal. This will likely lead to a merge conflict (which you can resolve in RStudio) or put you in the VIM window (I don’t even know what that means) where you should push <code>:q</code> as quickly as possible to escape.</p>
+
 </article></slide><slide class=""><hgroup><h2>Resources</h2></hgroup><article  id="resources">
 
 <p>These slides: <a href='https://github.com/llendway/rladies_github_for_collab' title=''>https://github.com/llendway/rladies_github_for_collab</a></p>
@@ -4732,7 +4760,9 @@ slide:not(.current) .plotly.html-widget{
 
 <p>Happy Git with R by Jenny Bryan: <a href='https://happygitwithr.com/' title=''>https://happygitwithr.com/</a> - an amazing resource, especially after you’re a little more comfortable with using Git and Github</p>
 
-<p>The usethis Pull request helpers article: <a href='https://usethis.r-lib.org/articles/articles/pr-functions.html' title=''>https://usethis.r-lib.org/articles/articles/pr-functions.html</a></p></article></slide>
+<p>The usethis Pull request helpers article: <a href='https://usethis.r-lib.org/articles/articles/pr-functions.html' title=''>https://usethis.r-lib.org/articles/articles/pr-functions.html</a></p>
+
+<p>Melanie Frazier’s Guide, <em>GitHub: A beginner’s guide to going back in time (aka fixing mistakes)</em>: <a href='https://ohi-science.org/news/github-going-back-in-time' title=''>https://ohi-science.org/news/github-going-back-in-time</a></p></article></slide>
 
 
   <slide class="backdrop"></slide>

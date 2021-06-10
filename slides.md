@@ -282,6 +282,35 @@ Let's do it!
 
 We're going to make pull requests to a PR practice repo I created: https://github.com/llendway/pr_practice
 
+## Using the terminal ... queue scary music
+
+I don't like the terminal, but sometimes I'm forced to use it. When I have to do that, my palms get sweaty, and I sometimes close my eyes and peak through my fingers after hitting return while I wait in fear to see what sort of mistake I might have made. I've learned a few Git commands that I feel comfortable enough to share.
+
+There's a video of me doing these same things here: https://lisalendway.netlify.app/posts/2021-02-24-gitinrstudio/#i-use-the-terminal-and-come-out-alive
+
+## Using the terminal
+
+This first one doesn't actually require the terminal (yay!).
+
+You save a file, but don't want those changes. You can right-click on the file in the Git tab and choose revert. You can also choose diff to see how it has changed from its last version. This will change the file back to the previous commit. So, if you've saved a lot and not committed, that could be a lot of changes.
+
+## Using the terminal
+
+You committed something you didn't actually want to commit. Or maybe you committed something that's too large to push to Github (that's usually my mistake). So, I need to "un-commit", which means heading to the terminal. In the terminal, run `git reset HEAD~1` which will bring back all the files you just committed as if they were never committed - you may need to refresh the Git pane. 
+
+Then, you can make the changes you want, even deleting a file, and re-commit.
+
+## Using the terminal
+
+This time you committed and pushed. You may have made additional commits that you DO NOT CARE ABOUT. To revert to an old commit, use `git revert --no-commit <SHA>..HEAD` in the terminal, where `<SHA>` is the alpha numeric string that defines that commit. You can find the `<SHA>` in the history (the clock icon) in the Git tab.
+
+## Using the terminal
+
+This time you committed something, pushed it, and made more commits along the way.
+
+We can go back to a previous commit and keep our new commits by using `git revert <SHA>` in the terminal. This will likely lead to a merge conflict (which you can resolve in RStudio) or put you in the VIM window (I don't even know what that means) where you should push `:q` as quickly as possible to escape.
+
+
 ## Resources
 
 These slides: https://github.com/llendway/rladies_github_for_collab
@@ -291,6 +320,8 @@ My blog post, with video (thank you to my sister, Heather): https://lisalendway.
 Happy Git with R by Jenny Bryan: https://happygitwithr.com/ - an amazing resource, especially after you're a little more comfortable with using Git and Github
 
 The usethis Pull request helpers article: https://usethis.r-lib.org/articles/articles/pr-functions.html
+
+Melanie Frazier's Guide, *GitHub: A beginner's guide to going back in time (aka fixing mistakes)*: https://ohi-science.org/news/github-going-back-in-time
 
 
 
